@@ -14,7 +14,9 @@ if (1) {
   console.log('Ок!');
 } */
 
-(num === 50) ? console.log('Ok!'): console.log('Error');
+const number = 50;
+
+let car  = (number === 50) ? console.log('Ok!') : console.log('Error');
 
 const num = '50';
 
