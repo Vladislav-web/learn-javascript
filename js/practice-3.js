@@ -16,10 +16,9 @@ P.S. Функции вызывать не обязательно*/
 let numberOfFilms;
 
 function start() {
-  numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
-
+  numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
   while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-    numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
   }
 }
 
@@ -34,11 +33,11 @@ const personalMovieDB = {
 };
 
 
-function rememberMyFilms(params) {
+function rememberMyFilms() {
   for (let i = 0; i < 2; ++i) {
     const a = prompt('Один из последних просмотренных фильмов'),
       b = prompt('На сколько оцените его?');
-
+  
     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
       personalMovieDB.movies[a] = b;
       console.log('done');
@@ -51,7 +50,8 @@ function rememberMyFilms(params) {
 
 // rememberMyFilms();
 
-function detectPersonalLevel(params) {
+
+function detectPersonalLevel() {
   if (personalMovieDB.count < 10) {
     console.log('Просмотрено довольно мало фильмов');
   } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
@@ -80,3 +80,4 @@ function writeYourGenres() {
 }
 
 writeYourGenres();
+
