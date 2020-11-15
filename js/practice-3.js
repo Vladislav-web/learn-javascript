@@ -13,7 +13,7 @@ P.S. Функции вызывать не обязательно*/
 
 'use strict';
 
-let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+let numberOfFilms;
 
 function start() {
     while (numberOfFilms == null || numberOfFilms == '' || isNaN(numberOfFilms)) {
