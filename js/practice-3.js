@@ -13,13 +13,12 @@ P.S. Функции вызывать не обязательно*/
 
 'use strict';
 
-let numberOfFilms;
+let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
 function start() {
-  numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-  while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-  }
+    while (numberOfFilms == null || numberOfFilms == '' || isNaN(numberOfFilms)) {
+      numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+    }
 }
 
 start();
@@ -29,7 +28,7 @@ const personalMovieDB = {
   movies: {},
   actors: {},
   genres: [],
-  privat: false
+  privat: true
 };
 
 
@@ -49,7 +48,6 @@ function rememberMyFilms() {
 }
 
 // rememberMyFilms();
-
 
 function detectPersonalLevel() {
   if (personalMovieDB.count < 10) {
@@ -80,4 +78,11 @@ function writeYourGenres() {
 }
 
 writeYourGenres();
+
+
+
+
+
+
+
 
