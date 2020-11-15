@@ -2,7 +2,6 @@
 
 function hello() {
   console.log("Hello World");
-  debugger;
 }
 
 hello();
